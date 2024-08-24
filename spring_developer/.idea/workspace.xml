@@ -8,14 +8,15 @@
       <change beforePath="$PROJECT_DIR$/../md/.idea/discord.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../md/.idea/material_theme_project_new.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../md/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../md/02_summary.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../md/04_summary.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../md/05_summary.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../md/08_summary.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../md/09_summary.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../md/img/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../md/02_summary.md" beforeDir="false" afterPath="$PROJECT_DIR$/../md_summary/02_summary.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../md/04_summary.md" beforeDir="false" afterPath="$PROJECT_DIR$/../md_summary/04_summary.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../md/05_summary.md" beforeDir="false" afterPath="$PROJECT_DIR$/../md_summary/05_summary.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../md/08_summary.md" beforeDir="false" afterPath="$PROJECT_DIR$/../md_summary/08_summary.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../md/09_summary.md" beforeDir="false" afterPath="$PROJECT_DIR$/../md_summary/09_summary.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../md/img/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/../md_summary/img/2.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../springboot-developer/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-developer/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../springboot-developer/src/main/resources/application.yml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
