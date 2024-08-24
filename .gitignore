@@ -1,6 +1,7 @@
 # 특정 파일 포함
 springboot-developer/src/main/resources/application.yml
-
+/Users/yanghwayeong/Desktop/Spring_ToyProject1/.idea
+/Users/yanghwayeong/Desktop/Spring_ToyProject1/springboot-developer/.idea
 # 빌드 관련 파일 제외
 .gradle
 build/
