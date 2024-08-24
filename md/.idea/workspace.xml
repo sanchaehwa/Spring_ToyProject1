@@ -4,24 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5494fa7a-bcd0-4044-a1ec-6a43737f6be7" name="Changes" comment="" />
+    <list default="true" id="a902f0eb-960d-4892-ad5e-61c7d4e8aee8" name="Changes" comment="md 추가">
+      <change afterPath="$PROJECT_DIR$/08_summary.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/09_summary.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot-developer/src/main/java/me/hwayeong/springbootdeveloper/controller/TokenApiController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../springboot-developer/src/main/java/me/hwayeong/springbootdeveloper/service/TokenService.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExternalProjectsData">
-    <projectState path="$PROJECT_DIR$">
-      <ProjectState />
-    </projectState>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
+  &quot;associatedIndex&quot;: 6
 }</component>
-  <component name="ProjectId" id="2l5wt8QlggtGLFKvWTrE668JfmB" />
+  <component name="ProjectId" id="2l0Bp9CAWFTYuJnsJlDeds5VN7j" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -29,61 +29,46 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/yanghwayeong/Desktop/Spring_ToyProject1/md&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/yanghwayeong/Desktop/Spring_ToyProject1/spring_developer/src/main/java/me/hwayeong/Main.java&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;spring&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
-    <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
-      <setting name="path" value="" />
-      <setting name="vmparams" value="" />
-      <setting name="params" value="" />
-      <setting name="workDir" value="file://$PROJECT_DIR$" />
-      <setting name="debug" value="false" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/img" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.18034.62" />
-        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.18034.62" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-WS-241.18034.50" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="5494fa7a-bcd0-4044-a1ec-6a43737f6be7" name="Changes" comment="" />
-      <created>1724151313209</created>
+      <changelist id="a902f0eb-960d-4892-ad5e-61c7d4e8aee8" name="Changes" comment="" />
+      <created>1724307293845</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1724151313209</updated>
-      <workItem from="1724483457443" duration="4116000" />
+      <updated>1724307293845</updated>
+      <workItem from="1724307294953" duration="16826000" />
+      <workItem from="1724412076345" duration="607000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/me/hwayeong/Main.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit" />
+    <MESSAGE value="md 추가" />
+    <option name="LAST_COMMIT_MESSAGE" value="md 추가" />
   </component>
 </project>
