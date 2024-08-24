@@ -1,14 +1,15 @@
+# 특정 파일 포함
+springboot-developer/src/main/resources/application.yml
+
+# 빌드 관련 파일 제외
 .gradle
 build/
 !gradle/wrapper/gradle-wrapper.jar
 !**/src/main/**/build/
 !**/src/test/**/build/
 
-### IntelliJ IDEA ###
-.idea/modules.xml
-.idea/jarRepositories.xml
-.idea/compiler.xml
-.idea/libraries/
+# IntelliJ IDEA 관련 파일 제외
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -16,7 +17,7 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-### Eclipse ###
+# Eclipse 관련 파일 제외
 .apt_generated
 .classpath
 .factorypath
@@ -28,15 +29,15 @@ bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
-### NetBeans ###
+# NetBeans 관련 파일 제외
 /nbproject/private/
 /nbbuild/
 /dist/
 /nbdist/
 /.nb-gradle/
 
-### VS Code ###
+# VS Code 관련 파일 제외
 .vscode/
 
-### Mac OS ###
+# Mac OS 관련 파일 제외
 .DS_Store
