@@ -8,6 +8,7 @@
 
 인가이란, 사이트의 특정 부분에 접근할 수 있는지 권한을 확인하는 작업.
 
+
 ### 아이디와 패스워드 기반 로그인 시도시, 스프링 시큐리티 처리 절차
 
 ![](/Users/yanghwayeong/Desktop/Spring_ToyProject1/md/img/2.png)

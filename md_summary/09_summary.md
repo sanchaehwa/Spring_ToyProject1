@@ -144,3 +144,60 @@ Access Token 으로 API 통신을 하고 Refresh Token 으로 만료되면 Acces
 Security Context Holder
 
 : 유효 토큰이라면, 시큐리티 컨텍스트 홀더에 인증 정보를 저장함. Security Context 란, 인증 객체가 저장되는 저장소. 인증 정보가 필요하다면, 꺼내 사용할 수 있는데. 이러한 Security Context 객체를 저장하는게 **Security Context Holder**
+
+## CODE [Spring Security 핵심 설정]
+
+```jsx
+
+    @Bean
+    //Spring Security Settings
+    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        return http
+                //Disable
+                .csrf(AbstractHttpConfigurer::disable)
+                .httpBasic(AbstractHttpConfigurer::disable)
+                .formLogin(AbstractHttpConfigurer::disable)
+                .logout(AbstractHttpConfigurer::disable)
+
+                .sessionManagement(management -> management.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
+                .addFilterBefore(tokenAuthenticationFilter(), UsernamePasswordAuthenticationFilter.class)
+                .authorizeRequests(auth -> auth
+                        .requestMatchers(new AntPathRequestMatcher("/api/token")).permitAll() //permitAll (누구나 접근 가능)
+                        .requestMatchers(new AntPathRequestMatcher("/api/**")).authenticated() //
+                        .anyRequest().permitAll())
+                .oauth2Login(oauth2 -> oauth2
+                        .loginPage("/login")
+                        .authorizationEndpoint(authorizationEndpoint -> authorizationEndpoint.authorizationRequestRepository(oAuth2AuthorizationRequestBasedOnCookieRepository()))
+                        .userInfoEndpoint(userInfoEndpoint -> userInfoEndpoint.userService(oAuth2UserCustomService))
+                        .successHandler(oAuth2SuccessHandler())
+                )
+                .exceptionHandling(exceptionHandling -> exceptionHandling
+                        .defaultAuthenticationEntryPointFor(
+                                new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED),
+                                new AntPathRequestMatcher("/api/**")
+                        ))
+                .build();
+    }
+
+```
+
+### CSRF 보호 비활성화, 기본 HTTP 인증 비활성화
+
+```jsx
+.csrf(AbstractHttpConfigurer::disable)
+.httpBasic(AbstractHttpConfigurer::disable)
+.formLogin(AbstractHttpConfigurer::disable) //OAuth2와 JWT를 사용하여 인증처리, Form 기반 로그인 필요하지않음.
+.logout(AbstractHttpConfigurer::disable)
+```
+
+CSRF(Cross-Site Request Forgery) 공격은 사용자가 의도하지 않은 요청을 전송하게 하는 공격
+
+CSRF 보호는 **서버 세션 기반 인증**을 사용할 때 유효함.
+
+하지만, 이 코드에서는 세션을 사용하지 않고, JWT를 사용하여 클라이언트 측에서 인증 정보를 관리하므로, CSRF 공격의 위험이 줄어듬. 그리고, JWT는 일반적으로 헤더에 포함되어 요청되기에, CSRF 보호가 필요하지 않음.
+
+**기본 HTTP 인증 비활성화,**
+
+기본 HTTP 인증은 브라우저가 **사용자 이름과 비밀번호를 요청 헤더**에 포함하여 서버에 전송하는 인증 방식.
+
+이 방식은, 보안이 취약하고 유연성이 부족하므로, 이 애플리케이션에서는 JWT 기반 인증을 사용하여 보다 안전하고 유연한 인증 방식을 구현함. 따라서 기본 HTTP 인증을 비활성화.
