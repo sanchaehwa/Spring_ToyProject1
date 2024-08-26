@@ -16,11 +16,11 @@ public  class TokenService {
 
     public String createNewAccessToken(String refreshToken) {
         if(!tokenProvider.validToken(refreshToken)) {
-            throw new IllegalArgumentException("Unexpected refresh token " );
+            throw new IllegalArgumentException("Unexpected token " );
         }
-        Long userUd = refreshTokenService.findByRefreshToken(refreshToken).getUserId();
+        Long userId = refreshTokenService.findByRefreshToken(refreshToken).getUserId();
         //RefreshToken으로 사용자 찾음
-        User user = userService.findById(userUd);
+        User user = userService.findById(userId);
 //찾고, 엑세스토큰 발급
         return tokenProvider.generateToken(user, Duration.ofHours(2));
 
