@@ -16,6 +16,7 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
+//User Class: 사용자 정보
 public class User implements UserDetails {
 
     @Id
@@ -26,15 +27,22 @@ public class User implements UserDetails {
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "password", nullable = false)
+    @Column(name = "password")
     private String password;
 
+    @Column(name = "nickname", unique = true)
+    private String nickname;
+
     @Builder
-    public User(String email, String password, String auth) {
+    public User(String email, String password, String nickname) {
         this.email = email;
         this.password = password;
+        this.nickname = nickname;
     }
-
+    public User update(String nickname) {
+        this.nickname = nickname;
+        return this;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
+//Refresh Token : 토큰 정보
 public class RefreshToken {
 
     @Id
