@@ -5,7 +5,7 @@ import lombok.AccessLevel;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import org.hibernate.annotations.ColumnDefault;
+//import org.hibernate.annotations.ColumnDefault;
 import org.springframework.data.annotation.CreatedDate;
 import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
@@ -41,9 +41,9 @@ public class Article {
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
 
-    @ColumnDefault("0")
-    @Column(name = "view_count", nullable = false)
-    private Integer viewCount;
+//    @ColumnDefault("0")
+//    @Column(name = "view_count", nullable = false)
+//    private Integer viewCount;
 
     @Builder
     public Article(String title, String content,String author) {
