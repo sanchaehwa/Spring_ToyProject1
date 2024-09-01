@@ -16,9 +16,7 @@ import java.util.List;
 @NoArgsConstructor(access = AccessLevel.PROTECTED)
 @Getter
 @Entity
-//User Class: 사용자 정보
 public class User implements UserDetails {
-
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", updatable = false)
@@ -27,21 +25,17 @@ public class User implements UserDetails {
     @Column(name = "email", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "password")
-    private String password;
-
     @Column(name = "nickname", unique = true)
     private String nickname;
+
+    @Column(name = "password")
+    private String password;
 
     @Builder
     public User(String email, String password, String nickname) {
         this.email = email;
         this.password = password;
         this.nickname = nickname;
-    }
-    public User update(String nickname) {
-        this.nickname = nickname;
-        return this;
     }
 
     @Override
@@ -58,7 +52,6 @@ public class User implements UserDetails {
     public String getPassword() {
         return password;
     }
-
     @Override
     public boolean isAccountNonExpired() {
         return true;
@@ -79,5 +72,8 @@ public class User implements UserDetails {
         return true;
     }
 
-
+    public User update(String nickname) {
+        this.nickname = nickname;
+        return this;
+    }
 }
